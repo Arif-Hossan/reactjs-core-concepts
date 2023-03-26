@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 const number = 777;
 const singer = {name : "Dr Mahfuz", job:"singer"};
@@ -64,6 +65,11 @@ function App() {
       <h3>Hello Dude, I am here to say hello</h3>
       <Friend name="Singham" phone="01777"></Friend>
       <Friend name="Bazrangi" phone="01799"></Friend>
+
+
+      {/* state */}
+     <Counter></Counter>
+
     </div>
   );
 }
@@ -86,6 +92,25 @@ function Friend(props){
       <p>Phone : {props.phone}</p>
     </div>
   )
+}
+
+function Counter (){
+  const [count,setCount] =useState(10);
+  const increaseCount = () => setCount(count + 1);
+  const decreaseCount = () => setCount(count - 1);
+
+  // const increaseCount = () =>{
+  //   const newCount = count + 1;
+  //   setCount(newCount);
+  // }
+  // console.log(abc);
+ return (
+  <div>
+    <h1>Count: {count}</h1>
+    <button onClick={increaseCount}>Increase</button>
+    <button onClick={decreaseCount}>Decrease</button>
+  </div>
+ )
 }
 
 export default App;
