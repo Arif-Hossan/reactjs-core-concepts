@@ -35,28 +35,32 @@ function App() {
       </header>
 
       {/* using person component */}
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
+      <Person name="Kuber" nayika="Kopila"></Person>
+      <Person name="Rubel" nayika="Moushumi"></Person>
+      <Person nayika="Chompa"></Person>
       <h3>Hello Dude, I am here to say hello</h3>
-      <Friend></Friend>
+      <Friend name="Singham" phone="01777"></Friend>
+      <Friend name="Bazrangi" phone="01799"></Friend>
     </div>
   );
 }
 
-function Person(){
+function Person(props){
+  // console.log(props);
   return (
     <div className="person">
-      <h2>Sakib Al Hasan</h2>
-      <p>Cricketer</p>
+      <h2>{props.name}</h2>
+      <p>Nayika : {props.nayika}</p>
     </div>
   )
 }
 
-function Friend(){
+function Friend(props){
+  console.log(props);
   return (
     <div className="container">
-      <h3>John Doe</h3>
+      <h3>{props.name}</h3>
+      <p>Phone : {props.phone}</p>
     </div>
   )
 }
