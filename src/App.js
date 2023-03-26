@@ -2,13 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 
 const number = 777;
-const singer = {name : "Dr Mahfuz", job:"singer"}
+const singer = {name : "Dr Mahfuz", job:"singer"};
+const singers = [
+  {name : "Dr Mahfuz", job:"singer"},
+  {name : "Agun", job:"Jontrona"},
+  {name : "Shubrata", job:"Pathor"}
+]
 // styling
 const singerStyle = {
   color:"Purple",
   backgroundColor:"White"
 }
 function App() {
+  const nayoks = ["Razzak","Rubel","Anwar","BappaRaz","Joshim"]
   return (
     <div className="App">
       <header className="App-header">
@@ -33,11 +39,28 @@ function App() {
           Learn React
         </a>
       </header>
+      {
+        nayoks.map(nayok => <li>{nayok}</li>)
+      }
+    {/* using array of objects */}
 
-      {/* using person component */}
-      <Person name="Kuber" nayika="Kopila"></Person>
+    {
+      singers.map(singer=> <Person name={singer.name}></Person>)
+    }
+
+
+     {/* using array */}
+
+      {/* {
+        nayoks.map(nayok => <Person name={nayok}></Person>)
+      } */}
+
+      {/* using person component normally */}
+
+      {/* <Person name="Kuber" nayika="Kopila"></Person>
       <Person name="Rubel" nayika="Moushumi"></Person>
-      <Person nayika="Chompa"></Person>
+      <Person nayika="Chompa"></Person> */}
+
       <h3>Hello Dude, I am here to say hello</h3>
       <Friend name="Singham" phone="01777"></Friend>
       <Friend name="Bazrangi" phone="01799"></Friend>
@@ -56,7 +79,7 @@ function Person(props){
 }
 
 function Friend(props){
-  console.log(props);
+  // console.log(props);
   return (
     <div className="container">
       <h3>{props.name}</h3>
