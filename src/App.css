@@ -43,3 +43,10 @@
   border-radius: 15px;
   color: red;
 }
+.person{
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 10px;
+  color: red;
+  border: 2px solid antiquewhite;
+}

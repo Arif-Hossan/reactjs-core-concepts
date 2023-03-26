@@ -33,8 +33,32 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* using person component */}
+      <Person></Person>
+      <Person></Person>
+      <Person></Person>
+      <h3>Hello Dude, I am here to say hello</h3>
+      <Friend></Friend>
     </div>
   );
+}
+
+function Person(){
+  return (
+    <div className="person">
+      <h2>Sakib Al Hasan</h2>
+      <p>Cricketer</p>
+    </div>
+  )
+}
+
+function Friend(){
+  return (
+    <div className="container">
+      <h3>John Doe</h3>
+    </div>
+  )
 }
 
 export default App;
